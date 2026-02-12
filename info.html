@@ -1,87 +1,171 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Information Details</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="hi">  
+<head>  
+  <meta charset="utf-8" />  
+  <meta name="viewport" content="width=device-width,initial-scale=1" />  
+  <title>We Mentioned All Information In this. Please Read All Details</title>  
+  <style>  
+    :root{  
+      --accent:#0b78d1;  
+      --muted:#bbb;  
+      --card-bg:#fff;  
+      --bg:#000; /* Dark mode background */  
+      --maxw:900px;  
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;  
+    }  
+    body{margin:0;background:var(--bg);color:#eee;line-height:1.5}  
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}  
+    header{  
+      margin-bottom:20px;  
+      background:#fdf5e6; /* Cream header */  
+      color:#111;  
+      padding:20px;  
+      border-radius:10px;  
+      text-align:center;  
+    }  
+    h1{
+  margin:0;
+  font-size:1.2rem;
+  font-weight:600;
+  color:#111;
+}
+    p.lead{color:#444;margin-top:6px}  
+    .card{background:var(--card-bg);color:#111;padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.4);margin-top:18px}  
+    ol.steps{padding-left:1.15rem;margin:0}  
+    .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px}  
+    .plan{  
+      border-radius:10px;  
+      padding:12px;  
+      background:#222;  
+      color:#fff;  
+      border:1px solid #444;  
+      text-align:center;  
+    }  
+    .plan h3{margin:0 0 6px 0;color:#fff}  
+    table.info{width:100%;border-collapse:collapse;margin-top:12px}  
+    table.info td, table.info th{padding:8px;border:1px solid #ddd}  
+    .important{background:#fff7e6;border-left:4px solid #ffb020;padding:12px;border-radius:8px;margin-top:12px}  
+    .cta{
+  display:flex;
+  justify-content:center;   /* 👈 ye add karo */
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+    .btn{  
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;  
+      border:0;cursor:pointer;  
+    }  
+    .btn-dark{  
+      background:#111;  
+      color:#fff !important;  
+      border:1px solid #444;  
+    }  
+    footer{color:#888;font-size:0.9rem;margin-top:18px;text-align:center}  
+    .small{font-size:0.95rem;color:#555}  
 
-    <style>
-        body {
-            margin: 0;
-            background: #eaeaea;
-            font-family: "Times New Roman", serif;
-        }
+    /* ✅ Contact form clean styling */
+    .contact-form {
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;              
+      max-width: 500px;       
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .contact-form button {
+      padding: 12px;
+      background: #0b78d1;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+    .contact-form button:hover {
+      background: #095a9d;
+    }
 
-        .container {
-            max-width: 750px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 40px 30px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            line-height: 1.8;
-            font-size: 18px;
-        }
+    /* ✅ Extra spacing fixes for Get in Touch */
+    #contact h2 { margin-bottom: 10px; }
+    #contact p.small { margin-bottom: 18px; }
+  </style>  
+</head>  
+<body>  
+  <div class="wrap">  
+    <header>  
+      <h1>We Mentioned All Information In This - Please Read All Details</h1>  
+      <p class="lead">please read the all introduction to apply - registration steps, packages and terms.</p>  
+    </header>  
 
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    <!-- Steps Section -->
+    <div class="card" id="how-to-apply">  
+      <h2>Application Steps</h2>  
+      <ol class="steps">  
+        <li><strong>Step 1</strong> - Please follow the instructions to join our club.</li>  
+        <li><strong>Step 2</strong> - There are three types of membership packages (below).</li>  
+        <li><strong>Step 3</strong> - Choose your budget plan and pay the membership registration fees.</li>  
+        <li><strong>Step 4</strong> - Then wait 30 minutes for membership id card.</li>  
+        <li><strong>Step 5</strong> - After registration wait for the meeting arrangement (around 1–2 hours).</li>  
+        <li><strong>Step 6</strong> - Attend the meeting and get paid directly from the client.</li>  
+      </ol>  
 
-        .important {
-            color: #8b0000;
-            font-weight: bold;
-            margin-top: 30px;
-            font-size: 22px;
-        }
+      <h3 style="margin-top:12px;color:#fff;background:#111;padding:8px;border-radius:6px;">Membership Plans</h3>  
+      <div class="plans">  
+            <div class="plan"><h3>1 MONTH PLAN</h3><p>₹999</p></div>    	
+        <div class="plan"><h3>3 MONTH PLAN</h3><p>₹1,999</p></div>  
+        <div class="plan"><h3>6 MONTH PLAN</h3><p>₹3,499</p></div>  
+      </div>  
 
-        .bold {
-            font-weight: bold;
-        }
-    </style>
-</head>
+      <h3 style="margin-top:14px">Earnings & Commission</h3>  
+      <table class="info">  
+        <tbody>  
+          <tr><th>Commission</th><td>25% commission to the club on every meeting.</td></tr>  
+          <tr><th>Clients / Month</th><td>Usually 8 to 10 female clients per month (approx.).</td></tr>  
+          <tr><th>Earnings per Client</th><td>Up to ₹16,000–₹28,000 per client depending on service quality.</td></tr>  
+          <tr><th>Meeting Timings / Place</th><td>Day, evening or night — decided by client (home, flat, hotel).</td></tr>  
+        </tbody>  
+      </table>  
 
-<body>
+      <div class="important">  
+        <strong>IMPORTANT NOTE:</strong>  
+        <ul>  
+          <li>Our package starts from ₹999 only.</li>  
+          <li>Don't provide wrong contact information.</li> 
+          <li>No meetings for non-registered person.</li>  
+        </ul>  
+      </div>  
 
-<div class="container">
+      <p class="small">How To Take Joining : Click the pay now button and pay 3 month registration fees to get joining and 2nd process take our payment qr code by our agent and pay the membership fee</p>  
 
-<p><span class="bold">Step 1 -</span> Please follow the instructions to join our club.</p>
+      <div class="cta">  
+        <a class="btn btn-dark" 
+href="upi://pay?pa=kunal-kori001@ptaxis&pn=Kunal%20Kori&am=1999&cu=INR">
+Pay Membership Registration Fee
+</a>
+      </div>  
+    </div>  
 
-<p><span class="bold">Step 2 -</span> There are three types of membership package.</p>
+    <!-- Privacy -->
+    <div class="card" id="privacy">  
+      <h2>Privacy Policy</h2>  
+      <p class="small">We respect your privacy. All personal details are confidential and used only for verification and communication.</p>  
+      <ul>  
+        <li>Information never shared with third parties.</li>  
+        <li>All communication as per your privacy.</li>  
+        <li>Members must respect client privacy too.</li>  
+      </ul>  
+    </div>  
 
-<p class="bold">
-1 MONTH PLAN - 999 RS<br>
-3 MONTH PLAN - 1999 RS<br>
-6 YEARLY PLAN - 3499 RS
-</p>
-
-<p><span class="bold">Step 3 -</span> choose your budget plan and pay the membership charge.</p>
-
-<p><span class="bold">Step 4 -</span> after payment wait 30 minutes for membership id card.</p>
-
-<p><span class="bold">Step 5 -</span> after membership our team arrange your meeting, then provide you meeting details within 1/2 hours.</p>
-
-<p><span class="bold">Step 6 -</span> contact the client and attend the meeting, then get paid directly from the client.</p>
-
-<p class="bold">
->>> you have to give 25% commission to us on every meeting.<br><br>
-
->>> we provide you 8 to 10 meeting per month.<br><br>
-
->>> client will pay you 16000 to 28000+ for one meeting depending on service quality.<br><br>
-
->>> Meeting will be arranged in day & Night time also.<br><br>
-
->>> first you have to take membership for attend meeting, we can't provide any meeting to non registered person.
-</p>
-
-<p class="important">IMPORTANT NOTE:</p>
-
-<p class="bold">
-1. Our package starts from Rs.999/- only.<br><br>
-2. Don't provide wrong contact information.<br><br>
-3. We can't provide any meeting to non registered person.
-</p>
-
-</div>
-
-</body>
+    <footer>© 2025 Radhika Friendship Club — All Rights Reserved</footer>  
+  </div>  
+</body>  
 </html>
